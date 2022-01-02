@@ -11,6 +11,7 @@ import '../styles/sign-up-photo-success.css';
 import '../styles/overview.css';
 import '../styles/edit-profile.css';
 import '../styles/sidebar.css';
+import '../styles/transactions-detail.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
