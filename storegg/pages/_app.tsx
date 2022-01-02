@@ -7,6 +7,7 @@ import '../styles/404-not-found.css';
 import '../styles/sign-in.css';
 import '../styles/sign-up.css';
 import '../styles/sign-up-photo.css';
+import '../styles/sign-up-photo-success.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
