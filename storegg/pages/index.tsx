@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 
-export default function index() {
+export default function landingPage() {
   useEffect(() => {
     AOS.init();
   }, []);
