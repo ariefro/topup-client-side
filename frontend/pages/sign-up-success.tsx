@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 export default function signUpPhotoSuccess() {
   return (
     <section className="sign-up-photo-success mx-auto pt-lg-227 pb-lg-227 pt-130 pb-50">
@@ -8,10 +11,10 @@ export default function signUpPhotoSuccess() {
               <div className="mb-20">
                 <div className="image-upload text-center">
                   <label htmlFor="file-input">
-                    <img
+                    <Image
                       src="/img/avatar-1.png"
-                      width="120"
-                      height="120"
+                      width={120}
+                      height={120}
                       className="rounded-circle"
                       alt=""
                     />
@@ -49,20 +52,22 @@ export default function signUpPhotoSuccess() {
               </div>
             </div>
             <div className="button-group d-flex flex-column mx-auto">
-              <a
-                className="btn btn-create fw-medium text-lg text-white rounded-pill mb-16"
-                href="./sign-up-success.html"
-                role="button"
-              >
-                Create My Account
-              </a>
-              <a
-                className="btn btn-tnc text-lg color-palette-1 text-decoration-underline pt-15"
-                href="/#"
-                role="button"
-              >
-                Terms & Conditions
-              </a>
+              <Link href="/sign-up-photo-success">
+                <a
+                  className="btn btn-create fw-medium text-lg text-white rounded-pill mb-16"
+                  role="button"
+                >
+                  Create My Account
+                </a>
+              </Link>
+              <Link href="/#">
+                <a
+                  className="btn btn-tnc text-lg color-palette-1 text-decoration-underline pt-15"
+                  role="button"
+                >
+                  Terms & Conditions
+                </a>
+              </Link>
             </div>
           </div>
         </form>
