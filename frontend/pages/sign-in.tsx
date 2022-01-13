@@ -10,7 +10,7 @@ export default function signIn() {
           <form action="">
             <div className="container mx-auto">
               <div className="pb-50">
-                <Link href="/#">
+                <Link href="/">
                   <a className="navbar-brand">
                     <Image src="/icon/logo.svg" width={60} height={60} />
                   </a>
@@ -27,7 +27,7 @@ export default function signIn() {
           </form>
         </div>
         <div className="col-xxl-7 col-lg-6 bg-blue text-center pt-lg-145 pb-lg-145 d-lg-block d-none">
-          <img
+          <Image
             src="/img/Header-9.png"
             width="502"
             height="391.21"

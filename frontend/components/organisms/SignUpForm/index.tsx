@@ -1,9 +1,30 @@
 import Link from 'next/link';
+import React from 'react';
 
-export default function SignInForm() {
+export default function SignUpForm() {
   return (
     <>
+      <h2 className="text-4xl fw-bold color-palette-1 mb-10">Sign Up</h2>
+      <p className="text-lg color-palette-1 m-0">
+        Daftar dan bergabung dengan kami
+      </p>
       <div className="pt-50">
+        <label
+          htmlFor="name"
+          className="form-label text-lg fw-medium color-palette-1 mb-10"
+        >
+          Full Name
+        </label>
+        <input
+          type="text"
+          className="form-control rounded-pill text-lg"
+          id="name"
+          name="name"
+          aria-describedby="name"
+          placeholder="Enter your name"
+        />
+      </div>
+      <div className="pt-30">
         <label
           htmlFor="email"
           className="form-label text-lg fw-medium color-palette-1 mb-10"
@@ -36,19 +57,20 @@ export default function SignInForm() {
         />
       </div>
       <div className="button-group d-flex flex-column mx-auto pt-50">
-        <a
-          className="btn btn-sign-in fw-medium text-lg text-white rounded-pill mb-16"
-          href="/#"
-          role="button"
-        >
-          Continue to Sign In
-        </a>
-        <Link href="/sign-up">
+        <Link href="/sign-up-photo">
           <a
-            className="btn btn-sign-up fw-medium text-lg color-palette-1 rounded-pill"
+            className="btn btn-sign-up fw-medium text-lg text-white rounded-pill mb-16"
             role="button"
           >
-            Sign Up
+            Continue
+          </a>
+        </Link>
+        <Link href="/sign-in">
+          <a
+            className="btn btn-sign-in fw-medium text-lg color-palette-1 rounded-pill"
+            role="button"
+          >
+            Sign In
           </a>
         </Link>
       </div>
