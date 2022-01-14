@@ -2,7 +2,14 @@ import Image from 'next/image';
 import cx from 'classnames';
 
 interface MenuItemProps {
-  icon: string;
+  icon:
+    | 'ic-menu-overview'
+    | 'ic-menu-transactions'
+    | 'ic-menu-card'
+    | 'ic-menu-logout'
+    | 'ic-menu-messages'
+    | 'ic-menu-rewards'
+    | 'ic-menu-settings';
   title: string;
   active?: boolean;
 }
