@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import SignUpForm from '../components/organisms/SignUpForm';
 
 export default function signUp() {
