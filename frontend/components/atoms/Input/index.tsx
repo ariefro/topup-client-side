@@ -4,7 +4,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
 }
 
-export default function input(props: InputProps) {
+export default function Input(props: InputProps) {
   const { label, ...nativeProps } = props;
   return (
     <>
