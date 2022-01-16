@@ -5,10 +5,14 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.2",
+    "mongodb": "^4.3.0",
     "nodemon": "^2.0.15"
   },
   "scripts": {
-    "dev": "nodemon src --exec babel-node"
+    "dev": "nodemon src/index.js --exec babel-node",
+    "build": "babel lib -d dist",
+    "start": "npm run build && nodemon dist/index.js",
+    "serve": "node dist/index.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.8",
@@ -16,6 +20,7 @@
     "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.8",
     "babel-eslint": "^10.1.0",
+    "babel-preset-latest": "^6.24.1",
     "eslint": "^8.7.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4"

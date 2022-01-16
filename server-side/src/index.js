@@ -1,11 +1,16 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+var MongoClient = require('mongodb').MongoClient;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+MongoClient.connect('mongodb://localhost:27017', function (err, client) {
+  if (err) throw err;
+  console.log('database connected');
 
-app.listen(port, () => {
-  console.log('Server running at port 3000');
+  var db = client.db('db_latihan');
+
+  db.collection('users')
+    .find()
+    .toArray(function (err, result) {
+      if (err) throw err;
+
+      console.log(result);
+    });
 });
