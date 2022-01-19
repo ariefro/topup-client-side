@@ -3,10 +3,11 @@
     "node": true,
     "es2021": true
   },
-  "parser": "babel-eslint",
-  "extends": ["airbnb-base"],
+  "parser": "@babel/eslint-parser",
+  "extends": ["airbnb"],
+  // "requireConfigFile": false,
   "parserOptions": {
-    "ecmaVersion": "latest",
+    "ecmaVersion": 12,
     "sourceType": "module"
   },
   "settings": {
@@ -14,7 +15,14 @@
       "node": {
         "path": "src"
       }
+    },
+    "react": {
+      "version": "999.999.999"
     }
   },
-  "rules": {}
+  "rules": {
+    "no-console": 0,
+    "import/no-import-module-exports": 0,
+    "import/named": 0
+  }
 }

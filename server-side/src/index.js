@@ -1,16 +1,15 @@
-var MongoClient = require('mongodb').MongoClient;
+import express from 'express';
+import apis from './routes/apis';
 
-MongoClient.connect('mongodb://localhost:27017', function (err, client) {
-  if (err) throw err;
-  console.log('database connected');
+require('../db');
+require('dotenv').config();
 
-  var db = client.db('db_latihan');
+const app = express();
+app.use(express.json());
+app.use('/api', apis);
 
-  db.collection('users')
-    .find()
-    .toArray(function (err, result) {
-      if (err) throw err;
+// view engine setup
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
 
-      console.log(result);
-    });
-});
+app.listen(process.env.APP_PORT, () => console.log(`Server running at ${process.env.APP_PORT}`));
