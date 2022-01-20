@@ -4,8 +4,9 @@ const ROUTE_PARAMS = {
 
 const API_ROUTES = {
   ROOT: '/',
-  CREATE_CATEGORY: '/admin/category/create',
+  GET_CATEGORIES: '/admin/category',
   GET_CATEGORY_BY_ID: `/admin/category/${ROUTE_PARAMS.id}`,
+  CREATE_CATEGORY: '/admin/category/create',
 };
 
 const ADMIN_ROUTES = {

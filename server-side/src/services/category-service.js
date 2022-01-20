@@ -2,6 +2,12 @@ import Category from '../models/category';
 import ERRORS from '../config/errors';
 
 class CategoryService {
+  static getCategories = async () => {
+    const categories = await Category.find();
+
+    return categories;
+  };
+
   static createCategory = async ({ name }) => {
     if (!name) {
       throw new Error(ERRORS.INCOMPLETE_INPUT);

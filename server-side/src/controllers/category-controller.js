@@ -11,6 +11,16 @@ class CategoryController {
     res.render('admin/category/create.ejs');
   };
 
+  static getCategories = async (req, res) => {
+    try {
+      const result = await CategoryService.getCategories();
+
+      res.status(200).json(result);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   static createCategory = async (req, res) => {
     try {
       const { name } = req.body;
