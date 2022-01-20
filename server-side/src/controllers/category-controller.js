@@ -16,7 +16,18 @@ class CategoryController {
       const { name } = req.body;
       await CategoryService.createCategory({ name });
 
-      res.redirect('/admin/category');
+      res.redirect(200, '/admin/category');
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  static getCategoryById = async (req, res) => {
+    try {
+      const { id } = req.params;
+      const result = await CategoryService.getCategoryById({ _id: id });
+
+      res.status(200).json(result);
     } catch (err) {
       console.log(err);
     }

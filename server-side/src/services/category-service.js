@@ -13,6 +13,14 @@ class CategoryService {
 
     return category;
   };
+
+  static getCategoryById = async ({ id }) => {
+    const category = await Category.findOne({ id });
+
+    if (!category) throw new Error(ERRORS.NOT_FOUND);
+
+    return category;
+  };
 }
 
 export default CategoryService;
