@@ -1,5 +1,8 @@
 import express from 'express';
 import path from 'path';
+import methodOverride from 'method-override';
+import session from 'express-session';
+import flash from 'connect-flash';
 import apis from './routes/apis';
 import views from './routes/views';
 
@@ -7,11 +10,17 @@ require('./db');
 require('dotenv').config();
 
 const app = express();
-const methodOverride = require('method-override');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { },
+}));
+app.use(flash());
 
 app.use('/', views);
 app.use('/api', apis);
