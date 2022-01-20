@@ -7,11 +7,7 @@ const API_ROUTES = {
   GET_CATEGORIES: '/admin/category',
   GET_CATEGORY_BY_ID: `/admin/category/${ROUTE_PARAMS.id}`,
   CREATE_CATEGORY: '/admin/category/create',
-};
-
-const ADMIN_ROUTES = {
-  ROOT: '/admin',
-  CATEGORY: '/admin/category',
+  UPDATE_CATEGORY: `/admin/category/edit/${ROUTE_PARAMS.id}`,
 };
 
 const VIEW_ROUTES = {
@@ -19,6 +15,7 @@ const VIEW_ROUTES = {
   ADMIN: '/admin',
   CATEGORY: '/admin/category',
   CREATE_CATEGORY: '/admin/category/create',
+  UPDATE_CATEGORY: `/admin/category/edit/${ROUTE_PARAMS.id}`,
 };
 
-export { API_ROUTES, ADMIN_ROUTES, VIEW_ROUTES };
+export { API_ROUTES, VIEW_ROUTES };

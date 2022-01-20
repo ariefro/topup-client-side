@@ -21,7 +21,17 @@ class CategoryService {
   };
 
   static getCategoryById = async ({ id }) => {
-    const category = await Category.findOne({ id });
+    const category = await Category.findOne({ _id: id });
+
+    if (!category) throw new Error(ERRORS.NOT_FOUND);
+
+    return category;
+  };
+
+  static updateCategory = async ({ id, name }) => {
+    const category = Category.findOneAndUpdate({
+      _id: id,
+    }, { name });
 
     if (!category) throw new Error(ERRORS.NOT_FOUND);
 

@@ -26,7 +26,7 @@ class CategoryController {
       const { name } = req.body;
       await CategoryService.createCategory({ name });
 
-      res.redirect(200, '/admin/category');
+      res.redirect('/admin/category');
     } catch (err) {
       console.log(err);
     }
@@ -35,9 +35,32 @@ class CategoryController {
   static getCategoryById = async (req, res) => {
     try {
       const { id } = req.params;
-      const result = await CategoryService.getCategoryById({ _id: id });
+      const result = await CategoryService.getCategoryById({ id });
 
       res.status(200).json(result);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  static formUpdateCategoryView = async (req, res) => {
+    try {
+      const { id } = req.params;
+      const category = await CategoryService.getCategoryById({ id });
+
+      res.render('admin/category/edit.ejs', { category });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  static updateCategory = async (req, res) => {
+    try {
+      const { id } = req.params;
+      const { name } = req.body;
+      await CategoryService.updateCategory({ id, name });
+
+      res.redirect('/admin/category');
     } catch (err) {
       console.log(err);
     }

@@ -7,8 +7,11 @@ require('./db');
 require('dotenv').config();
 
 const app = express();
+const methodOverride = require('method-override');
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 
 app.use('/', views);
 app.use('/api', apis);
