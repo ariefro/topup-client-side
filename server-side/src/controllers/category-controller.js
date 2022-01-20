@@ -65,6 +65,17 @@ class CategoryController {
       console.log(err);
     }
   };
+
+  static deleteCategory = async (req, res) => {
+    try {
+      const { id } = req.params;
+      await CategoryService.deleteCategory({ id });
+
+      res.redirect('/admin/category');
+    } catch (err) {
+      console.log(err);
+    }
+  };
 }
 
 export default CategoryController;

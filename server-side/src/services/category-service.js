@@ -37,6 +37,14 @@ class CategoryService {
 
     return category;
   };
+
+  static deleteCategory = async ({ id }) => {
+    const category = Category.findByIdAndDelete({ _id: id });
+
+    if (!category) throw new Error(ERRORS.NOT_FOUND);
+
+    return category;
+  };
 }
 
 export default CategoryService;

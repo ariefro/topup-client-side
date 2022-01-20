@@ -8,6 +8,7 @@ const API_ROUTES = {
   GET_CATEGORY_BY_ID: `/admin/category/${ROUTE_PARAMS.id}`,
   CREATE_CATEGORY: '/admin/category/create',
   UPDATE_CATEGORY: `/admin/category/edit/${ROUTE_PARAMS.id}`,
+  DELETE_CATEGORY: `/admin/category/delete/${ROUTE_PARAMS.id}`,
 };
 
 const VIEW_ROUTES = {
