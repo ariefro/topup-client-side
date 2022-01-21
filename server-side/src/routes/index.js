@@ -9,6 +9,7 @@ const API_ROUTES = {
   CREATE_CATEGORY: '/admin/category/create',
   UPDATE_CATEGORY: `/admin/category/edit/${ROUTE_PARAMS.id}`,
   DELETE_CATEGORY: `/admin/category/delete/${ROUTE_PARAMS.id}`,
+  CREATE_NOMINAL: '/admin/nominal/create',
 };
 
 const VIEW_ROUTES = {
@@ -17,6 +18,8 @@ const VIEW_ROUTES = {
   CATEGORY: '/admin/category',
   CREATE_CATEGORY: '/admin/category/create',
   UPDATE_CATEGORY: `/admin/category/edit/${ROUTE_PARAMS.id}`,
+  NOMINAL: '/admin/nominal',
+  CREATE_NOMINAL: '/admin/nominal/create',
 };
 
 export { API_ROUTES, VIEW_ROUTES };

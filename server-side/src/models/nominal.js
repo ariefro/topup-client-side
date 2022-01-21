@@ -15,4 +15,6 @@ const categorySchema = new mongoose.Schema({
   },
 });
 
-export default categorySchema;
+const Nominal = mongoose.model('Nominal', categorySchema);
+
+export default Nominal;
