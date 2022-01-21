@@ -25,6 +25,16 @@ class NominalService {
 
     return nominal;
   };
+
+  static updateNominal = async ({
+    id, coinName, coinQuantity, price,
+  }) => {
+    const nominal = Nominal.findOneAndUpdate({
+      _id: id,
+    }, { coinName, coinQuantity, price });
+
+    return nominal;
+  };
 }
 
 export default NominalService;
