@@ -12,7 +12,7 @@ router.get(VIEW_ROUTES.CREATE_CATEGORY, CategoryController.formCreateCategoryVie
 router.get(VIEW_ROUTES.UPDATE_CATEGORY, CategoryController.formUpdateCategoryView);
 router.get(VIEW_ROUTES.UPDATE_CATEGORY, CategoryController.updateCategory);
 
-router.get(VIEW_ROUTES.NOMINAL, NominalController.nominalView);
+router.get(VIEW_ROUTES.NOMINAL, NominalController.GetAllNominal);
 router.get(VIEW_ROUTES.CREATE_NOMINAL, NominalController.formCreateNominalView);
 
 export default router;

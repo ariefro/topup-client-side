@@ -15,6 +15,16 @@ class NominalService {
 
     return nominal;
   };
+
+  static getAllNominal = async () => {
+    const nominal = await Nominal.find();
+
+    if (!nominal) {
+      throw new Error(ERRORS.NOT_FOUND);
+    }
+
+    return nominal;
+  };
 }
 
 export default NominalService;
