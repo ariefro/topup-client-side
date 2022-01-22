@@ -22,6 +22,7 @@ const VIEW_ROUTES = {
   UPDATE_CATEGORY: `/admin/category/edit/${ROUTE_PARAMS.id}`,
   NOMINAL: '/admin/nominal',
   CREATE_NOMINAL: '/admin/nominal/create',
+  UPDATE_NOMINAL: `/admin/nominal/edit/${ROUTE_PARAMS.id}`,
 };
 
 export { API_ROUTES, VIEW_ROUTES };

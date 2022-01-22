@@ -63,7 +63,7 @@ class CategoryController {
       const { id } = req.params;
       const category = await CategoryService.getCategoryById({ id });
 
-      res.render('admin/category/edit.ejs', { category });
+      res.render('admin/category/edit', { category });
     } catch (err) {
       console.log(err);
     }

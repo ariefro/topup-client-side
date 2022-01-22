@@ -35,6 +35,15 @@ class NominalService {
 
     return nominal;
   };
+
+  static getById = async ({ id }) => {
+    const nominal = await Nominal.findOne({ _id: id });
+    if (!nominal) {
+      throw new Error(ERRORS.NOT_FOUND);
+    }
+
+    return nominal;
+  };
 }
 
 export default NominalService;

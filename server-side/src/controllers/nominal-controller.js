@@ -49,6 +49,17 @@ class NominalController {
       console.log(err);
     }
   };
+
+  static formUpdateNominal = async (req, res) => {
+    try {
+      const { id } = req.params;
+      const nominal = await NominalService.getById({ id });
+
+      res.render('admin/nominal/edit', { nominal });
+    } catch (err) {
+      console.log(err);
+    }
+  };
 }
 
 export default NominalController;

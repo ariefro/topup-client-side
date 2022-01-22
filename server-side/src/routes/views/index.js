@@ -14,5 +14,7 @@ router.get(VIEW_ROUTES.UPDATE_CATEGORY, CategoryController.updateCategory);
 
 router.get(VIEW_ROUTES.NOMINAL, NominalController.GetAllNominal);
 router.get(VIEW_ROUTES.CREATE_NOMINAL, NominalController.formCreateNominalView);
+router.get(VIEW_ROUTES.UPDATE_NOMINAL, NominalController.formUpdateNominal);
+router.get(VIEW_ROUTES.UPDATE_NOMINAL, NominalController.updateNominal);
 
 export default router;
