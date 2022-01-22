@@ -4,17 +4,28 @@ import Category from '../models/category';
 import Nominal from '../models/nominal';
 import Voucher from '../models/voucher';
 import config from '../config';
+import VoucherService from '../services/voucher-service';
 
 class VoucherController {
   static viewVoucher = async (req, res) => {
-    res.render('admin/voucher');
+    try {
+      const voucher = await VoucherService.getAllVoucher();
+
+      res.render('admin/voucher', { voucher });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   static formCreateVoucher = async (req, res) => {
-    const category = await Category.find();
-    const nominal = await Nominal.find();
+    try {
+      const category = await Category.find();
+      const nominal = await Nominal.find();
 
-    res.render('admin/voucher/create', { category, nominal });
+      res.render('admin/voucher/create', { category, nominal });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   static createVoucher = async (req, res) => {
