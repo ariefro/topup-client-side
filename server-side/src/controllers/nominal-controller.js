@@ -60,6 +60,17 @@ class NominalController {
       console.log(err);
     }
   };
+
+  static deleteNominal = async (req, res) => {
+    try {
+      const { id } = req.params;
+      await NominalService.deleteNominal({ id });
+
+      res.redirect('/admin/nominal');
+    } catch (err) {
+      console.log(err);
+    }
+  };
 }
 
 export default NominalController;

@@ -16,7 +16,7 @@
         <td><%= nominal[i].coinQuantity %></td>
         <td><%= nominal[i].price %></td>
         <td>
-          <form method="POST">
+          <form action="/api/admin/nominal/delete/<%= nominal[i]._id %>?_method=DELETE" method="POST">
             <a href="/admin/nominal/edit/<%= nominal[i]._id %>" class="btn btn-info btn-sm">
               <i class="fas fa-pencil-alt"></i>
               Edit

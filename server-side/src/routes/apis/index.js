@@ -14,5 +14,6 @@ router.delete(API_ROUTES.DELETE_CATEGORY, CategoryController.deleteCategory);
 router.post(API_ROUTES.CREATE_NOMINAL, NominalController.createNominal);
 router.get(API_ROUTES.GET_NOMINALS, NominalController.getAllData);
 router.put(API_ROUTES.UPDATE_NOMINAL, NominalController.updateNominal);
+router.delete(API_ROUTES.DELETE_NOMINAL, NominalController.deleteNominal);
 
 export default router;

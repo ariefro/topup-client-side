@@ -44,6 +44,12 @@ class NominalService {
 
     return nominal;
   };
+
+  static deleteNominal = async ({ id }) => {
+    const nominal = await Nominal.findOneAndRemove({ _id: id });
+
+    return nominal;
+  };
 }
 
 export default NominalService;

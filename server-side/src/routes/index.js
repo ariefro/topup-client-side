@@ -12,6 +12,7 @@ const API_ROUTES = {
   CREATE_NOMINAL: '/admin/nominal/create',
   GET_NOMINALS: '/admin/nominal',
   UPDATE_NOMINAL: `/admin/nominal/edit/${ROUTE_PARAMS.id}`,
+  DELETE_NOMINAL: `/admin/nominal/delete/${ROUTE_PARAMS.id}`,
 };
 
 const VIEW_ROUTES = {
