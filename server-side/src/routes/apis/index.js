@@ -1,7 +1,10 @@
 import express from 'express';
+import multer from 'multer';
+import os from 'os';
 import { API_ROUTES } from '..';
 import CategoryController from '../../controllers/category-controller';
 import NominalController from '../../controllers/nominal-controller';
+import VoucherController from '../../controllers/voucher-controller';
 
 const router = express.Router();
 
@@ -15,5 +18,7 @@ router.post(API_ROUTES.CREATE_NOMINAL, NominalController.createNominal);
 router.get(API_ROUTES.GET_NOMINALS, NominalController.getAllData);
 router.put(API_ROUTES.UPDATE_NOMINAL, NominalController.updateNominal);
 router.delete(API_ROUTES.DELETE_NOMINAL, NominalController.deleteNominal);
+
+router.post(API_ROUTES.CREATE_VOUCHER, multer({ dest: os.tmpdir() }).single('image'), VoucherController.createVoucher);
 
 export default router;

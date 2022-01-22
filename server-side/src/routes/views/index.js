@@ -3,6 +3,7 @@ import { VIEW_ROUTES } from '..';
 import AdminController from '../../controllers/admin-controller';
 import CategoryController from '../../controllers/category-controller';
 import NominalController from '../../controllers/nominal-controller';
+import VoucherController from '../../controllers/voucher-controller';
 
 const router = express.Router();
 
@@ -16,5 +17,8 @@ router.get(VIEW_ROUTES.NOMINAL, NominalController.GetAllNominal);
 router.get(VIEW_ROUTES.CREATE_NOMINAL, NominalController.formCreateNominalView);
 router.get(VIEW_ROUTES.UPDATE_NOMINAL, NominalController.formUpdateNominal);
 router.get(VIEW_ROUTES.UPDATE_NOMINAL, NominalController.updateNominal);
+
+router.get(VIEW_ROUTES.VOUCHER, VoucherController.viewVoucher);
+router.get(VIEW_ROUTES.CREATE_VOUCHER, VoucherController.formCreateVoucher);
 
 export default router;

@@ -13,6 +13,8 @@ const API_ROUTES = {
   GET_NOMINALS: '/admin/nominal',
   UPDATE_NOMINAL: `/admin/nominal/edit/${ROUTE_PARAMS.id}`,
   DELETE_NOMINAL: `/admin/nominal/delete/${ROUTE_PARAMS.id}`,
+  CREATE_VOUCHER: '/admin/voucher/create',
+  GET_VOUCHER: '/admin/voucher',
 };
 
 const VIEW_ROUTES = {
@@ -24,6 +26,8 @@ const VIEW_ROUTES = {
   NOMINAL: '/admin/nominal',
   CREATE_NOMINAL: '/admin/nominal/create',
   UPDATE_NOMINAL: `/admin/nominal/edit/${ROUTE_PARAMS.id}`,
+  VOUCHER: '/admin/voucher',
+  CREATE_VOUCHER: '/admin/voucher/create',
 };
 
 export { API_ROUTES, VIEW_ROUTES };

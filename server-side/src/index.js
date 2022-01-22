@@ -29,9 +29,7 @@ app.use('/api', apis);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(
-  '/adminlte',
-  express.static(path.join(__dirname, '../node_modules/admin-lte/')),
-);
+app.use(express.static(path.join(__dirname, '../public')));
+app.use('/adminlte', express.static(path.join(__dirname, '../node_modules/admin-lte/')));
 
 app.listen(process.env.APP_PORT, () => console.log(`Server running at ${process.env.APP_PORT}`));
