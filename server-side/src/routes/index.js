@@ -17,6 +17,7 @@ const API_ROUTES = {
   GET_VOUCHER: '/admin/voucher',
   GET_VOUCHER_BY_ID: `/admin/voucher/${ROUTE_PARAMS.id}`,
   UPDATE_VOUCHER: `/admin/voucher/edit/${ROUTE_PARAMS.id}`,
+  DELETE_VOUCHER: `/admin/voucher/delete/${ROUTE_PARAMS.id}`,
 };
 
 const VIEW_ROUTES = {

@@ -23,5 +23,6 @@ router.post(API_ROUTES.CREATE_VOUCHER, multer({ dest: os.tmpdir() }).single('ima
 router.get(API_ROUTES.GET_VOUCHER, VoucherController.getAllData);
 router.get(API_ROUTES.GET_VOUCHER_BY_ID, VoucherController.getDataById);
 router.put(API_ROUTES.UPDATE_VOUCHER, multer({ dest: os.tmpdir() }).single('image'), VoucherController.updateVoucher);
+router.delete(API_ROUTES.DELETE_VOUCHER, VoucherController.deleteVoucher);
 
 export default router;

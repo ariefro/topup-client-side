@@ -43,6 +43,15 @@ class VoucherService {
 
     return voucher;
   };
+
+  static deleteVoucher = async ({ id }) => {
+    const voucher = await Voucher.findByIdAndDelete({ _id: id });
+    if (!voucher) {
+      throw new Error(ERRORS.NOT_FOUND);
+    }
+
+    return voucher;
+  };
 }
 
 export default VoucherService;

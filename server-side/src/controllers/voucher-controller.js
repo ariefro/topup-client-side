@@ -165,6 +165,18 @@ class VoucherController {
       res.redirect('/admin/voucher');
     }
   };
+
+  static deleteVoucher = async (req, res) => {
+    const { id } = req.params;
+    const voucher = await VoucherService.deleteVoucher({ id });
+
+    const currentImage = `${config.rootPath}/public/uploads/${voucher.thumbnail}`;
+    if (fs.existsSync(currentImage)) {
+      fs.unlinkSync(currentImage);
+    }
+
+    res.redirect('/admin/voucher');
+  };
 }
 
 export default VoucherController;
