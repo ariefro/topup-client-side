@@ -15,6 +15,8 @@ const API_ROUTES = {
   DELETE_NOMINAL: `/admin/nominal/delete/${ROUTE_PARAMS.id}`,
   CREATE_VOUCHER: '/admin/voucher/create',
   GET_VOUCHER: '/admin/voucher',
+  GET_VOUCHER_BY_ID: `/admin/voucher/${ROUTE_PARAMS.id}`,
+  UPDATE_VOUCHER: `/admin/voucher/edit/${ROUTE_PARAMS.id}`,
 };
 
 const VIEW_ROUTES = {
@@ -28,6 +30,7 @@ const VIEW_ROUTES = {
   UPDATE_NOMINAL: `/admin/nominal/edit/${ROUTE_PARAMS.id}`,
   VOUCHER: '/admin/voucher',
   CREATE_VOUCHER: '/admin/voucher/create',
+  UPDATE_VOUCHER: `/admin/voucher/edit/${ROUTE_PARAMS.id}`,
 };
 
 export { API_ROUTES, VIEW_ROUTES };

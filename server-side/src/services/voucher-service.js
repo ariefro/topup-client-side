@@ -16,6 +16,33 @@ class VoucherService {
 
     return voucher;
   };
+
+  static getVoucherById = async ({ id }) => {
+    const voucher = await Voucher.findOne({ _id: id });
+
+    if (!voucher) {
+      throw new Error(ERRORS.NOT_FOUND);
+    }
+
+    return voucher;
+  };
+
+  static updateVoucher = async ({
+    id,
+    name,
+    category,
+    nominal,
+  }) => {
+    const voucher = await Voucher.findOneAndUpdate({
+      _id: id,
+    }, { name, category, nominal });
+
+    if (!name || !category || !nominal) {
+      throw new Error(ERRORS.INCOMPLETE_INPUT);
+    }
+
+    return voucher;
+  };
 }
 
 export default VoucherService;

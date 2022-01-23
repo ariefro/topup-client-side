@@ -20,5 +20,6 @@ router.get(VIEW_ROUTES.UPDATE_NOMINAL, NominalController.updateNominal);
 
 router.get(VIEW_ROUTES.VOUCHER, VoucherController.viewVoucher);
 router.get(VIEW_ROUTES.CREATE_VOUCHER, VoucherController.formCreateVoucher);
+router.get(VIEW_ROUTES.UPDATE_VOUCHER, VoucherController.formEditVoucher);
 
 export default router;
